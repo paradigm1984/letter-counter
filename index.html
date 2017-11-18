@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Letter Counter </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-left">
+      <a href="#"> Letter Counter </a>
+    </div>
+    <div class="nav-right">
+      <p> Data about your words! </p>
+    </div>
+  </header>
+  <div class="main">
+    <div class="submit-div">
+      <h1> Letter Counter </h1>
+      <p> Letter Counter tallys the amount of times letters are repeated, based on the words submitted. try it out!
+      <form>
+        <input type="text">
+        <button type="submit">Count the Letters!</button>
+        <button id="reset" type="button">Reset</button>
+      </form>
+    </div>
+    <div class="data-div">
+      <h2 id="phrase"></h2>
+      <h4 id="count"></h4>
+      <div id="letters"></div>
+      <div id="placeholder"> Your counts will appear here! </div>
+    </div>
+
+  </div> <!-- end main -->
+  <footer>
+    <p class="footer-text"> &copy; Daniel Blanco </p>
+  </footer>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
