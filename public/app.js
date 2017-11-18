@@ -40,7 +40,7 @@ d3.select("form")
     .merge(letters)
         .style("width", "25px")
         .style("line-height", "16px")
-        .style("margin-right", "5px")
+        .style("margin-right", "3px")
         // make the height a function that adds 20 px per count
         .style("height", function(d) {
           return d.count * 20 + "px";

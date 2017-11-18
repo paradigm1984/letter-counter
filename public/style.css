@@ -5,6 +5,7 @@ orange: rgba(254, 127, 45, 1);
 olivegray: rgba(105, 114, 104, 1);
 greenishbeige: rgba(149, 163, 164, 1);
 chalk: rgba(183, 209, 218, 1);
+whitechalk: rgb(215, 233, 239);
 darkchalk: rgb(142, 169, 178);
 */
 
@@ -22,7 +23,7 @@ header {
 .nav {
   background-color: rgba(35, 61, 77, 1);
   color: white;
-  height: 55px;
+  height: 50px;
   font-family: sans-serif;
   border-bottom: 3px solid rgba(149, 163, 164, 1);
 }
@@ -35,22 +36,32 @@ header {
 
 .nav-left a {
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 1.45em;
   color: rgba(183, 209, 218, 1);
 }
 
 .nav-right {
   float: left;
-  margin: 17px 8px;
+  margin: 16px 0;
+}
+
+@media screen and (max-width: 731px) {
+  .nav-right {
+    float: right;
+    margin-right: 18px;
+  }
 }
 
 .nav-right p {
-  margin: auto 8px;
+  margin: auto 0px;
+  margin-left: 10px;
+  font-size: .95em;
   text-decoration: none;
   color: rgba(183, 209, 218, 1);
+  font-style: italic;
 }
 
-@media screen and (max-width: 401px) {
+@media screen and (max-width: 375px) {
   .nav-right p {
     display: none;
   }
@@ -62,20 +73,17 @@ header {
     margin: auto;
     display: block;
   }
-
-
-
 }
 
 .main {
   margin: 0 auto;
   padding-botom: 20px;
   height: 100%;
-  background-color: rgba(183, 209, 218, 1);
+  background-color: rgb(213, 231, 237);
 }
 
 .submit-div {
-  padding: 20px 30px 50px;
+  padding: 20px 30px 60px;
   background-color: rgba(254, 127, 45, 1);
   color: white;
   font-family: sans-serif;
@@ -84,7 +92,9 @@ header {
 
 .submit-div h1 {
   color: white;
-  font-size: 2.8em;
+  font-size: 4em;
+  margin: 20px auto;
+  font-weight: bolder;
   letter-spacing: .05em;
   -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,1) 30%, rgba(183, 209, 218, .8) 50%, rgba(0,0,0,1) 70%);
   -webkit-mask-size: 200%;
@@ -102,7 +112,7 @@ header {
 }
 
 .submit-div p {
-  margin: 5px auto 40px;
+  margin: 5px 60px 50px;
   color: white;
   letter-spacing: .05em;
   font-size: 1.2em;
@@ -130,8 +140,21 @@ form > input {
     margin-bottom: 20px;
   }
 
+  .submit-div h1 {
+    letter-spacing: 0;
+    padding: 0px;
+    font-size: 2.3em;
+  }
+
   .submit-div p {
     margin: 5px auto 30px;
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .submit-div h1 {
+    display: none;
   }
 }
 
@@ -163,7 +186,7 @@ form > button:active {
 
 #letters {
   margin: 20px auto ;
-  width: 800px;
+  width: 100%;
 }
 
 #phrase {
@@ -172,6 +195,12 @@ form > button:active {
   font-family: sans-serif;
   color: rgba(35, 61, 77, 1);
   margin: 40px auto;
+}
+
+@media screen and (max-width: 500px) {
+  #phrase {
+    font-size: 1.6em;
+  }
 }
 
 #count {
@@ -192,16 +221,29 @@ form > button:active {
   border-radius: 4px;
 }
 
+@media screen and (max-width: 500px) {
+  .letter {
+    font-size: 1.5em;
+    padding: 7px 4px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .letter {
+    font-size: 1em;
+
+  }
+}
+
 .new {
   color: rgba(183, 209, 218, 1);
 }
 
 #placeholder {
-  height: 60px;
+  height: 80px;
   width: 100%;
-  margin: 42px auto;
-  font-size: 1.6em;
-  background-color: rgba(183, 209, 218, 1);
+  margin: 62px auto 42px;
+  font-size: 2em;
   color: rgb(142, 169, 178);
   font-family: sans-serif;
   opacity: 0;
@@ -209,7 +251,12 @@ form > button:active {
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in;
 	animation-duration: 2s;
+}
 
+@media screen and (max-width: 550px) {
+  #placeholder {
+    font-size: 1.4em;
+  }
 }
 
 @keyframes fadeInOpacity {
@@ -224,6 +271,8 @@ form > button:active {
 		opacity: .4;
 	}
 }
+
+
 
 footer {
   text-align: center;
